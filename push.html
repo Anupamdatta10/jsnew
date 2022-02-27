@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <button onclick="add()">add</button>
+    <script>
+        var arr=[];
+        var i=0;
+        function add()
+        {
+            i++;
+            arr.push(i);
+            document.getElementById('d1').innerHTML="";
+           for(var j=0;j<arr.length;j++)
+           { 
+               document.getElementById('d1').innerHTML+=`<div>${arr[j]}</div>`
+            }
+            
+        }
+        function display()
+        {
+            
+        }
+    </script>
+</body>
+</html>

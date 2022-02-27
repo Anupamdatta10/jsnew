@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-style{
+            background-color: cornflowerblue;
+            margin-bottom: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border: 2px dashed black;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+
+let data=[
+    {
+        "email":"anupam@gmail.com",
+        "password":"1234"
+    },
+    {
+        "email":"priyanka@gmail.com",
+        "password":"1234"
+    },
+    {
+        "email":"saptarshi@gmail.com",
+        "password":"1234"
+    }
+]
+var i=0;
+for(i=0;i<data.length;i++)
+{
+var d1=document.getElementById("d1");
+d1.innerHTML=d1.innerHTML+`<div class="div-style">${data[i].email}</div>`
+}
+    </script>
+</body>
+</html>
