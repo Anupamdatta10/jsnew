@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="api_call()">
+    <div id="d1"></div>
+    <img src="" id="i1">
+    <button onclick="api_call()">add</button>
+    <script>
+        function api_call()
+        {
+            fetch("https://randomuser.me/api/").then((e)=>{
+                e.json().then(function(data) {
+                    document.getElementById("d1").innerHTML=JSON.stringify(data.results[0].name.first +" "+ data.results[0].name.last);
+                    
+                    document.getElementById("i1").src=data.results[0].picture.large;
+
+                });
+              
+               
+            })
+           
+        }
+    </script>
+</body>
+</html>
